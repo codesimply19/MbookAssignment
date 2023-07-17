@@ -79,6 +79,7 @@ const HomeAccounting = () => {
           paddingVertical: 15,
           paddingHorizontal: 10,
           backgroundColor: '#fff',
+          zIndex: 5
         }}>
         <View
           style={{
@@ -290,7 +291,7 @@ const HomeAccounting = () => {
           <View style={{marginBottom: 40}}>
             {/* Chart here */}
             <BarChart
-              barWidth={22}
+              barWidth={200}
               noOfSections={3}
               barBorderRadius={4}
               frontColor="lightgray"
@@ -305,12 +306,22 @@ const HomeAccounting = () => {
                 dashWidth: 2,
                 dashGap: 3,
               }}
+              roundedTop
+              onPress={(item,index)=>console.log(item)}
+              // renderTooltip={(item, index)=> 
+               
+              //   {
+              //     console.log(item)
+              //     return(
+              //     123
+              //     )
+              //   }}
             />
           </View>
         </View>
         <View style={styles.line}></View>
         {/* 3rd box */}
-        <View>
+        <View >
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <MaterialIcons name="money" size={30} color="#A4D0A4" />
             <View style={{marginLeft: 30}}>
@@ -352,13 +363,13 @@ export default HomeAccounting;
 const styles = StyleSheet.create({
 
   background: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     zIndex: 0,
   },
   backgroundContent: {
     flex: 1,
-    marginTop: 150,
+    marginTop: 200,
     alignItems: 'center',
   },
   backgroundText: {
@@ -367,15 +378,11 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   slider: {
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+    backgroundColor: '#f5f5f5',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
     padding: 16,
-    shadowColor: '#171717',
-    shadowOffset: {width: 0, height: 0},
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
-    elevation:5,
+    paddingBottom: 30,
   },
   line: {
     borderBottomWidth: 1,

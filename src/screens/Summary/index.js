@@ -4,9 +4,9 @@ import styles from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Feather from 'react-native-vector-icons/Feather';
+import Entypo from 'react-native-vector-icons/Entypo'
 
 import { LineChart, PieChart } from "react-native-gifted-charts";
-
 
 const Summary = () => {
 
@@ -58,7 +58,7 @@ const Summary = () => {
         >
           {isFlipped ? (
             <View style={[styles.card, styles.backCard]}>
-              <Text style={styles.cardText}>Back</Text>
+              <Text style={styles.cardText}>Flip</Text>
             </View>
           ) : (
             <View style={styles.card}>
@@ -166,7 +166,11 @@ const Summary = () => {
       <View style={{ paddingHorizontal: 20, paddingVertical: 10, marginTop: 30 }} >
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Text style={{ fontSize: 20, fontWeight: '500', color: '#000' }}>Properties</Text>
-          <Text style={{ fontSize: 20, fontWeight: '500', color: '#000' }}>All Properties</Text>
+          <View style={{ flexDirection: 'row', alignItems:'center'}}>
+          <Text style={{ fontSize: 16, fontWeight: '500', color: '#0BA5A4', marginRight: 20 }}>All Properties</Text>
+          <Entypo name= 'chevron-right' size={18} color='#0BA5A4'/>
+          </View>
+          
         </View>
 
 
@@ -207,7 +211,10 @@ const Summary = () => {
               radius={60}
               data={pieData}
               centerLabelComponent={() => {
-                return <Text style={{ fontSize: 30 }}>70%</Text>;
+                return ( <View style={{alignItems: 'center'}}> 
+                  <Text style={{ fontSize: 20, fontWeight: 600, color: '#000' }}>632</Text>
+                 <Text style={{ fontSize: 14, color: '#000' }}>total Units</Text>
+                </View>)
               }}
             />
           </View>

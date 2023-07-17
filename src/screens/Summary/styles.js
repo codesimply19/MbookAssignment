@@ -15,13 +15,13 @@ export default StyleSheet.create({
     card: {
       width: 100,
       height: 100,
-      backgroundColor: 'blue',
+      backgroundColor: '#F2A349',
       justifyContent: 'space-between',
       borderRadius: 10,
       padding: 10
     },
     backCard: {
-      backgroundColor: 'red',
+      backgroundColor: '#5AC8D5',
       borderRadius: 10,
       width: 100,
       height: 100,
