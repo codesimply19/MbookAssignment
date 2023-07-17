@@ -307,15 +307,7 @@ const HomeAccounting = () => {
                 dashGap: 3,
               }}
               roundedTop
-              onPress={(item,index)=>console.log(item)}
-              // renderTooltip={(item, index)=> 
-               
-              //   {
-              //     console.log(item)
-              //     return(
-              //     123
-              //     )
-              //   }}
+              renderTooltip={(item, index) => <Text>{item.value}</Text>}
             />
           </View>
         </View>
