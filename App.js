@@ -14,13 +14,11 @@ import BottomNavigator from './BottomNavigator';
 
 const App = () => {
   return (
-    <View>
          <NavigationContainer>
           <BottomNavigator/>
         
       </NavigationContainer>
-      <Text>App</Text>
-    </View>
+     
   )
 }
 
