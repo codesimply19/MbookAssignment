@@ -22,7 +22,12 @@ export default StyleSheet.create({
     },
     backCard: {
       backgroundColor: 'red',
-      borderRadius: 10
+      borderRadius: 10,
+      width: 100,
+      height: 100,
+      padding: 10,
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     cardText: {
       color: 'white',
